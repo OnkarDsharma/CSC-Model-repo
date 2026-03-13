@@ -200,3 +200,49 @@ What `train_model.py` applies:
 Model artifact:
 
 - `risk_model.pkl`
+
+## Deploy On Render
+
+This repository is ready for Render deployment using:
+
+- `requirements.txt`
+- `runtime.txt`
+- `render.yaml`
+
+### Option A: Blueprint Deploy (recommended)
+
+1. Open Render dashboard.
+2. Click **New** -> **Blueprint**.
+3. Select this GitHub repo.
+4. Render reads `render.yaml` and creates service automatically.
+
+### Option B: Manual Web Service
+
+1. Open Render dashboard.
+2. Click **New** -> **Web Service**.
+3. Select this GitHub repo.
+4. Use these settings:
+	- Build Command: `pip install -r requirements.txt`
+	- Start Command: `uvicorn predict_api:app --host 0.0.0.0 --port $PORT`
+
+### Verify Deployment
+
+- Health: `GET /health`
+- Prediction: `POST /predict-risk`
+
+Example:
+
+- `https://<your-render-url>/health`
+- `https://<your-render-url>/predict-risk`
+
+### For Teammate Backend
+
+Share your Render base URL. Teammate backend should call:
+
+- `POST https://<your-render-url>/predict-risk`
+
+Then teammate frontend shows returned fields:
+
+- `risk_score`
+- `risk_level`
+- `main_contributing_factors`
