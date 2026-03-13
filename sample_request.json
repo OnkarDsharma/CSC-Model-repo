@@ -1,0 +1,16 @@
+{
+  "service_type": "income_certificate",
+  "age": 58,
+  "gender": "male",
+  "caste": "OBC",
+  "district": "raipur",
+  "annual_income": 120000,
+  "average_income_last_3_years": 110000,
+  "missing_documents_count": 1,
+  "missing_fields_count": 0,
+  "field_mismatch_count": 1,
+  "document_quality_score": 0.8,
+  "age_eligible": 0,
+  "income_eligible": 1,
+  "district_valid": 1
+}

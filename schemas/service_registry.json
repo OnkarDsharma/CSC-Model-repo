@@ -1,0 +1,341 @@
+{
+  "services": {
+    "income_certificate": {
+      "sections": {
+        "beneficiary_details": [
+          "gender",
+          "age_of_beneficiary",
+          "beneficiary_guardian_type",
+          "beneficiary_guardian_name",
+          "relation_with_applicant",
+          "beneficiary_relative_name",
+          "caste",
+          "type",
+          "class_number"
+        ],
+        "address_details": [
+          "address",
+          "pin_code",
+          "district"
+        ],
+        "income_details": [
+          "business_or_service_details",
+          "reason_for_application",
+          "annual_income",
+          "average_income_last_3_years"
+        ],
+        "declaration": [
+          "date",
+          "place",
+          "applicant_name",
+          "signature"
+        ]
+      },
+      "documents": {
+        "mandatory": [
+          "affidavit",
+          "income_proof"
+        ],
+        "accepted_income_proof": [
+          "certificate_from_patwari",
+          "certificate_from_sarpanch",
+          "employer_income_certificate",
+          "form16",
+          "land_income_proof",
+          "income_of_family_members"
+        ],
+        "optional": []
+      }
+    },
+    "domicile_certificate": {
+      "sections": {
+        "general_details": [
+          "beneficiary_guardian_type",
+          "beneficiary_guardian_name",
+          "guardian_occupation",
+          "place_of_birth",
+          "gender",
+          "date_of_birth"
+        ],
+        "address_details": [
+          "address",
+          "pin_code",
+          "district"
+        ],
+        "residence_details": [
+          "particulars_of_stay_after_birth"
+        ],
+        "business_details": [
+          "beneficiary_business_or_service_details"
+        ],
+        "education_details": [
+          "beneficiary_education_level"
+        ],
+        "other_details": [
+          "voter_id_available",
+          "district_name_of_beneficiary",
+          "living_in_state_years",
+          "reason_for_domicile_application",
+          "other_details"
+        ],
+        "declaration": [
+          "date",
+          "signature"
+        ]
+      },
+      "documents": {
+        "mandatory": [
+          "affidavit",
+          "proof_of_15_years_residence",
+          "educational_certificate"
+        ],
+        "accepted_residence_proofs": [
+          "birth_certificate",
+          "voter_id",
+          "ration_card",
+          "electricity_bill",
+          "land_house_document",
+          "ward_member_certificate"
+        ],
+        "optional": [
+          "proof_of_5_years_residence"
+        ]
+      }
+    },
+    "sc_st_certificate": {
+      "sections": {
+        "general_details": [
+          "beneficiary_guardian_type",
+          "beneficiary_guardian_name",
+          "guardian_type_english",
+          "guardian_name_english",
+          "gender",
+          "marital_status",
+          "date_of_birth",
+          "relation_to_applicant",
+          "caste",
+          "category",
+          "caste_english",
+          "category_english",
+          "category_number",
+          "beneficiary_name_english"
+        ],
+        "present_address": [
+          "address",
+          "pin_code",
+          "post_box_number",
+          "district",
+          "address_english",
+          "present_permanent_same"
+        ],
+        "permanent_address": [
+          "address",
+          "pin_code",
+          "district",
+          "post_box_number",
+          "police_station"
+        ],
+        "permanent_address_before_1950": [
+          "village_or_town",
+          "patwari_halka_number",
+          "tehsil",
+          "district",
+          "head_of_family_name",
+          "relation_to_head_of_family"
+        ],
+        "residence_since_1950": [
+          "guardian_residence_since_1950",
+          "guardian_address_details"
+        ],
+        "other_details": [
+          "previous_scst_certificate",
+          "document_proof_for_scst"
+        ],
+        "declaration": [
+          "date",
+          "place",
+          "applicant_name",
+          "signature"
+        ]
+      },
+      "documents": {
+        "mandatory": [
+          "caste_proof"
+        ],
+        "accepted_caste_proof_documents": [
+          "caste_certificate_other_state",
+          "certificate_from_sarpanch",
+          "school_transfer_certificate",
+          "father_service_certificate",
+          "educational_certificate",
+          "census_register",
+          "citizen_register",
+          "jamabandi"
+        ],
+        "optional": [
+          "affidavit",
+          "vanshavali",
+          "gram_sabha_proposal"
+        ]
+      }
+    },
+    "obc_certificate": {
+      "sections": {
+        "general_details": [
+          "beneficiary_guardian_type",
+          "beneficiary_guardian_name",
+          "guardian_type_english",
+          "guardian_name_english",
+          "gender",
+          "marital_status",
+          "date_of_birth",
+          "relation_to_applicant",
+          "caste_obc",
+          "category",
+          "caste_english",
+          "category_english",
+          "category_number",
+          "beneficiary_name_english"
+        ],
+        "present_address": [
+          "address",
+          "pin_code",
+          "post_box_number",
+          "district",
+          "address_english",
+          "present_permanent_same"
+        ],
+        "permanent_address": [
+          "address",
+          "pin_code",
+          "district",
+          "post_box_number",
+          "police_station"
+        ],
+        "historical_address": [
+          "village_or_town",
+          "patwari_halka_number",
+          "tehsil",
+          "district",
+          "head_of_family_name",
+          "relation_to_head_of_family"
+        ],
+        "residence_since_1984": [
+          "guardian_residence_since_1984",
+          "guardian_address_details"
+        ],
+        "declaration": [
+          "date",
+          "place",
+          "applicant_name",
+          "signature"
+        ]
+      },
+      "documents": {
+        "mandatory": [
+          "affidavit",
+          "income_proof",
+          "obc_proof"
+        ],
+        "accepted_income_proof": [
+          "patwari_certificate",
+          "sarpanch_certificate",
+          "employer_income_certificate",
+          "form16"
+        ],
+        "accepted_obc_proof": [
+          "obc_certificate_of_father",
+          "educational_certificate",
+          "school_transfer_certificate",
+          "jamabandi",
+          "census_register"
+        ],
+        "optional": [
+          "vanshavali",
+          "gram_sabha_proposal"
+        ]
+      }
+    },
+    "land_use_information": {
+      "sections": {
+        "applicant_details": [
+          "applicant_name",
+          "father_name"
+        ],
+        "land_details": [
+          "village_name",
+          "patwari_halka_number",
+          "khasra_number",
+          "is_applicant_owner"
+        ],
+        "declaration": [
+          "date",
+          "place",
+          "applicant_name",
+          "signature"
+        ]
+      },
+      "documents": {
+        "mandatory": [
+          "khasra",
+          "naksha",
+          "challan_copy"
+        ],
+        "optional": []
+      }
+    },
+    "birth_certificate_correction": {
+      "sections": {
+        "application_info": [
+          "application_number"
+        ],
+        "place_of_birth": [
+          "birth_place_type",
+          "hospital_or_institute_name",
+          "birth_place_local_language",
+          "birth_place_english"
+        ],
+        "child_birth_registration": [
+          "date_of_birth",
+          "gender",
+          "child_name_local_language",
+          "child_name_english",
+          "registration_number",
+          "registration_date"
+        ],
+        "father_details": [
+          "father_name_local_language",
+          "father_name_english",
+          "father_aadhaar_number"
+        ],
+        "guardian_address": [
+          "address_at_time_of_birth_local_language",
+          "address_at_time_of_birth_english",
+          "permanent_address_local_language",
+          "permanent_address_english"
+        ],
+        "mother_details": [
+          "mother_name_local_language",
+          "mother_name_english",
+          "mother_aadhaar_number"
+        ],
+        "declaration": [
+          "date",
+          "place",
+          "applicant_name",
+          "signature"
+        ]
+      },
+      "documents": {
+        "mandatory": [
+          "existing_birth_certificate",
+          "supporting_correction_proof"
+        ],
+        "optional": [
+          "hospital_record",
+          "school_record"
+        ]
+      }
+    }
+  }
+}
