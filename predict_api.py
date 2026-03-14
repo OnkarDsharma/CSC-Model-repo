@@ -60,6 +60,17 @@ _model = None
 _threshold = 0.5
 
 
+def normalize_payload(payload: Dict) -> Dict:
+    normalized = dict(payload)
+
+    # Income certificate does not have an income-limit rejection rule in the
+    # target business flow, so ignore this signal for inference/explanation.
+    if normalized.get("service_type") == "income_certificate":
+        normalized["income_eligible"] = 1
+
+    return normalized
+
+
 def load_model_and_threshold() -> None:
     global _model
     global _threshold
@@ -112,7 +123,9 @@ def predict_row(payload: Dict) -> Dict:
     if _model is None:
         load_model_and_threshold()
 
-    input_df = pd.DataFrame([[payload[col] for col in FEATURE_COLUMNS]], columns=FEATURE_COLUMNS)
+    normalized_payload = normalize_payload(payload)
+
+    input_df = pd.DataFrame([[normalized_payload[col] for col in FEATURE_COLUMNS]], columns=FEATURE_COLUMNS)
     probability = float(_model.predict_proba(input_df)[0, 1])
     score = round(probability * 100, 2)
     decision = int(probability >= _threshold)
@@ -123,7 +136,7 @@ def predict_row(payload: Dict) -> Dict:
         "risk_level": risk_level(probability),
         "rejected_prediction": decision,
         "threshold_used": round(_threshold, 6),
-        "main_contributing_factors": contributing_factors(payload),
+        "main_contributing_factors": contributing_factors(normalized_payload),
     }
 
 
